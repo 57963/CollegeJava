@@ -1,3 +1,5 @@
 1444300523794	Rename compilation unit 'Main.java'
 1444300943633	Encapsulate field 'num1'
 1444300947676	Encapsulate field 'num2'
+1444302234201	Encapsulate field 'op'
+1444302384143	Encapsulate field 'ans'

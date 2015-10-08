@@ -1,12 +1,27 @@
 package com.as.cs.exercises;
+import com.as.cs.exercises.CalcController.Op;
 
 public class Calc {
 	private static float num1;
 	private static float num2;
-	Calc(float num1, float num2){
+	private static Op op;
+	private static float ans;
+
+	Calc(float num1, float num2, Op op){
 		Calc.num1 = num1;
 		Calc.num2 = num2;
+		Calc.op = op;
+		switch (op){
+		case MULTIPLY: multiply(num1,num2); break;
+		}
+		System.out.println("-------------");
 	}
+	
+	public static void multiply (float num1, float num2){
+		ans = num1*num2;
+		System.out.println(ans);
+	}
+	
 	public static float getNum1() {
 		return num1;
 	}
@@ -19,4 +34,21 @@ public class Calc {
 	public static void setNum2(float num2) {
 		Calc.num2 = num2;
 	}
+
+	public static Op getOp() {
+		return op;
+	}
+
+	public static void setOp(Op op) {
+		Calc.op = op;
+	}
+
+	public float getAns() {
+		return ans;
+	}
+
+	public void setAns(float ans) {
+		this.ans = ans;
+	}
+	
 }

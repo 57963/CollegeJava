@@ -1,0 +1,18 @@
+package com.as.cs.exercises;
+import java.util.*;
+
+public class CalcController {
+	private static float num1;
+	private static float num2;
+	
+	public static void main(String[] args){
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("First Number: ");
+		num1 = keyboard.nextFloat();
+		System.out.print("Second Number: ");
+		num2 = keyboard.nextFloat();
+		
+	}
+	
+	Calc calculator = new Calc(num1, num2);
+}
