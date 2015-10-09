@@ -21,8 +21,8 @@ public class AreasController {
 		case "circle": shape = Shape.CIRCLE; break;
 		case "Circle": shape = Shape.CIRCLE; break;
 		case "CIRCLE": shape = Shape.CIRCLE; break;
-		case "rectangle": shape = Shape.RECTANGLE; break;
-		case "Rectangle": shape = Shape.RECTANGLE; break;
+		case "reactangle": shape = Shape.RECTANGLE; break;
+		case "Reactangle": shape = Shape.RECTANGLE; break;
 		case "RECTANGLE": shape = Shape.RECTANGLE; break;
 		case "square": shape = Shape.SQUARE; break;
 		case "Square": shape = Shape.SQUARE; break;
