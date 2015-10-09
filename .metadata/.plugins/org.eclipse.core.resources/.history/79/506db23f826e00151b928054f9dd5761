@@ -1,0 +1,10 @@
+package com.as.cs.exercises.areas;
+
+public class AreasController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

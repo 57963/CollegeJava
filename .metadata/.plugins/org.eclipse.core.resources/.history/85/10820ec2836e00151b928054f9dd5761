@@ -1,0 +1,27 @@
+package com.as.cs.exercises.areas;
+
+import java.util.Scanner;
+
+public class AreasController {
+	public enum Shape {
+		TRIANGLE
+	}
+	public static Shape shape;
+	private static String shapeString;
+	private static float val1;
+	private static float val2;
+	public static void main(String[] args) {
+		@SuppressWarnings("resource")
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Shape: ");
+		shapeString = keyboard.next();
+		switch (shapeString){
+		case "triangle": shape = Shape.TRIANGLE; break;
+		}
+		System.out.print("First Value: ");
+		val1 = keyboard.nextFloat();
+		System.out.print("Second Value: ");
+		val2 = keyboard.nextFloat();
+		Areas areas = new Areas (val1, val2, shape);
+	}
+}
