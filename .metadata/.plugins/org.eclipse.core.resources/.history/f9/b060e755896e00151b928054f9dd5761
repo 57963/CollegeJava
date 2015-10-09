@@ -18,19 +18,13 @@ public class Areas {
 		case SQUARE: square(val1); break;
 		case SPHERE: sphere(val1); break;
 		case CONE: cone(val1, val2); break;
-		case CYLINDER: cylinder(val1, val2); break;
 		}
 		System.out.println(ans);
 		System.out.println("-------------");
 	}
 	
-	private void cylinder(float val1, float val2) {
-		ans = (float) ((2*Math.PI*val1*val2)+(2*Math.PI*Math.pow(val1, 2)));
-		
-	}
-
 	public void cone(float val1, float val2) {
-		ans = (float) (Math.PI * val1 *(val1 + Math.pow(Math.pow(val2, 2) + Math.pow(val1, 2), 0.5)));
+		and = (float) (Math.PI * val1 *(val1 + Math.pow(Math.pow(val2, 2) + Math.pow(val1, 2), 0.5)));
 	}
 
 	public void sphere(float val1) {

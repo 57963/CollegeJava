@@ -30,12 +30,6 @@ public class AreasController {
 		case "sphere": shape = Shape.SPHERE; break;
 		case "Sphere": shape = Shape.SPHERE; break;
 		case "SPHERE": shape = Shape.SPHERE; break;
-		case "cone": shape = Shape.CONE; break;
-		case "Cone": shape = Shape.CONE; break;
-		case "CONE": shape = Shape.CONE; break;
-		case "cylinder": shape = Shape.CYLINDER; break;
-		case "Cylinder": shape = Shape.CYLINDER; break;
-		case "CYLINDER": shape = Shape.CYLINDER; break;
 		}
 		switch (shape){
 		case TRIANGLE:  request("Width", "Height"); break;
@@ -43,8 +37,6 @@ public class AreasController {
 		case RECTANGLE: request("Width", "Height"); break;
 		case SQUARE: request("Edge"); break;
 		case SPHERE: request("Radius"); break;
-		case CONE: request("Radius","Height"); break;
-		case CYLINDER: request("Radius","Height"); break;
 		}
 		
 		@SuppressWarnings("unused")
