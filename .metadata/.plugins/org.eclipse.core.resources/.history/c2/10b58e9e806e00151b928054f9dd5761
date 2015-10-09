@@ -11,6 +11,7 @@ public class Calc {
 		Calc.num1 = num1;
 		Calc.num2 = num2;
 		Calc.op = op;
+		System.out.println("hi");
 		switch (op){
 		case MULTIPLY: multiply(num1,num2); break;
 		case SUBTRACT: subtract(num1,num2); break;

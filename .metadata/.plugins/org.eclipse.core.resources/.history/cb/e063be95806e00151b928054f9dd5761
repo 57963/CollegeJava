@@ -46,8 +46,7 @@ public class CalcController {
 		System.out.print("Second Number: ");
 		num2 = keyboard.nextFloat();
 		
-		Calc calculator = new Calc(num1, num2, op);
 	}
 	
-	
+	Calc calculator = new Calc(num1, num2, op);
 }
