@@ -58,19 +58,19 @@ public class Areas {
 		return val1;
 	}
 	public void setVal1(float val1) {
-		this.val1 = val1;
+		Areas.val1 = val1;
 	}
 	public float getVal2() {
 		return val2;
 	}
 	public void setVal2(float val2) {
-		this.val2 = val2;
+		Areas.val2 = val2;
 	}
 	public Shape getShape() {
 		return shape;
 	}
 	public void setShape(Shape shape) {
-		this.shape = shape;
+		Areas.shape = shape;
 	}
 
 	public static float getAns() {

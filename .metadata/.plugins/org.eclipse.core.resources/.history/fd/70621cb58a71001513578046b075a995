@@ -1,0 +1,22 @@
+package com.as.cs.exercises.strings;
+
+public class Strings {
+
+	public static void main(String[] args) {
+		testImmutableString();
+		usingEquals();
+	}
+	
+	public static void testImmutableString(){
+		String firstName="Joe "; 
+		String lastName = "Bloggs";
+		String fullName= firstName.concat(lastName); 
+		System.out.println(fullName);
+	}
+	
+	public static void usingEquals(){
+		String longPhraseOne ="floxinoxinihilipilification";
+		String longPhraseTwo = "floxinoxinihilipilification";
+		System.out.println(longPhraseOne.equals(longPhraseTwo));//returns true
+	}
+}

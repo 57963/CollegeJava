@@ -1,0 +1,55 @@
+package com.as.cs.exercises.strings;
+
+public class Strings {
+
+	public static void main(String[] args) {
+		testImmutableString();
+		System.out.println("---------");
+		usingEquals();
+		System.out.println("---------");
+		substrings();
+		System.out.println("---------");
+		usingHashCode();
+		System.out.println("---------");
+		usingToString();
+	}
+	
+	public static void testImmutableString(){
+		String firstName="Joe "; 
+		String lastName = "Bloggs";
+		String fullName= firstName.concat(lastName); 
+		System.out.println(fullName);
+	}
+	
+	public static void usingEquals(){
+		String longPhraseOne ="floxinoxinihilipilification"; 
+		String longPhraseTwo = "floxinoxinihilipilification";
+		String longPhraseFour = new String("floxinoxinihilipilification");
+		//keyword has created a new object in the heap which now contain the address of the //string object “floxinoxinihilipilification” already in the string constant pool
+		System.out.println(longPhraseOne.equals(longPhraseTwo));//true-check for contents
+		System.out.println(longPhraseOne==longPhraseTwo);//true as both //variables are pointing to the same object in the string constant pool
+		System.out.println(longPhraseOne==longPhraseFour);// false as the “new”
+	}
+	
+	public static void substrings(){
+		String str ="floxinoxinihilipilification"; 
+		String subStringOne = str.substring(0,4);
+		System.out.println(subStringOne);
+		subStringOne = str.substring(15);
+		System.out.println(subStringOne);
+	}
+	
+	public static void usingHashCode(){
+		String one = "abc";
+		String two = "abc";
+		System.out.println("one " + one.hashCode());
+		System.out.println("two " + two.hashCode());
+	}
+	
+	public static void usingToString(){
+		String one = "abc";
+		String two = "abc";
+		System.out.println("one " + one.toString());
+		System.out.println("two " + two.toString());
+	}
+}

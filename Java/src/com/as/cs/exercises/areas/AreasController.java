@@ -58,7 +58,6 @@ public class AreasController {
 		val2 = keyboard.nextFloat();
 	}
 	
-	@SuppressWarnings("null")
 	public static void request(String req){
 		System.out.print(req +" : ");
 		val1 = keyboard.nextFloat();
