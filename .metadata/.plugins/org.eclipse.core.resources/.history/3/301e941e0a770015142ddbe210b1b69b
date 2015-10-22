@@ -1,0 +1,29 @@
+package com.ac.cs.exercises.gui;
+
+import javax.swing.JFrame;
+
+
+public class GUI extends JFrame {
+	private static final long serialVersionUID = 1L;
+	static JFrame frame = new JFrame();
+	private boolean run = true;
+
+	public GUI(){
+		frame.setContentPane(new DrawPanel());
+		frame.setSize(600,400);
+		frame.setTitle("Hi");
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		for(int i = 0;run;i++){
+			draw(i);
+		}
+	}
+	
+	public void draw(int i){
+		
+	}
+	
+	public static void main(String[] args){
+		new GUI();
+	}
+}

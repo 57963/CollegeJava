@@ -1,0 +1,19 @@
+package com.ac.cs.exercises.gui;
+
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class DrawPanel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	Graphics g;
+	public DrawPanel(Graphics g){
+		this.g = g;
+	}
+	public void paintComponent(Graphics g){
+		this.g = g;
+		for(int i = 0;i<10;i++){
+			g.drawLine(i*10, 0, 100, 100);
+		}
+	}
+}

@@ -1,0 +1,14 @@
+package dunes;
+
+import processing.core.PApplet;
+
+public class Dunes {
+
+	
+
+	public static void main(String[] args) {
+		PApplet.main(new String[] { dunes.Thingy.class.getName() });
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.ac.cs.exercises.gui;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class GUI extends JFrame {
+	private static final long serialVersionUID = 1L;
+	static JFrame frame = new JFrame();
+	private JLabel label = new JLabel("Label");
+	private boolean run = true;
+
+	public GUI(){
+		label.setText("hi");
+		label.setVisible(true);
+		frame.add(label);
+		frame.setSize(600,400);
+		frame.setTitle("Hi");
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		for(int i = 0;run;i++){
+			draw(i);
+		}
+	}
+	
+	public void draw(int i){
+		label.setLocation((int) Math.sin(i), 100);
+	}
+	
+	public static void main(String[] args){
+		new GUI();
+	}
+}

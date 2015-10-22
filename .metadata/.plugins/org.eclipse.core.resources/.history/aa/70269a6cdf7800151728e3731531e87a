@@ -1,0 +1,53 @@
+package dunes;
+
+import java.util.ArrayList;
+
+import processing.core.PApplet;
+import processing.core.PVector;
+
+public class Dunes extends PApplet{
+
+	int maxParticles = 1000;
+	ArrayList <particle> particles = new ArrayList <particle>();
+	float globalAngle = random(TWO_PI);
+	float c;
+	PVector pos;
+	
+	public void settings(){
+		size(displayWidth, displayHeight);
+	}
+	public void setup() {
+	  
+	  //smooth(8);
+	  strokeWeight(1);
+	  background(0);
+	  stroke(255);
+	  frameRate(1000);
+	}
+
+	public void mousePressed() {
+	  globalAngle = random(TWO_PI);
+	}
+
+	public void draw() {
+	    manage();
+	}
+
+
+
+	void manage() {
+	  for (int i = 0; i<particles.size (); i++) {
+	    particle p  = particles.get(i);
+	    if (p.life <= 0) {
+	      particles.remove(i);
+	    }
+	  }
+	  for (particle p : particles) {
+	    p.draw();
+	  }
+	  while (particles.size () < maxParticles) {
+	    particles.add(new particle(random(width), random(height), random(1)<0.5,globalAngle));
+	  }
+	}
+
+}

@@ -1,0 +1,27 @@
+package dunes;
+
+import processing.core.*;
+
+public class particle{
+	  PVector pos;
+	  float life;
+	  boolean black;
+	  float globalAngle;
+	  particle(float xpos, float ypos, boolean blacki, float globalAngle){
+	    pos = new PVector(xpos,ypos);
+	    life = random(255);
+	    black = blacki;
+	    this.globalAngle = globalAngle;
+	  }
+	  
+	  public void draw() {
+	    if(black){
+	      stroke(0);
+	    } else{
+	      stroke(map(pos.y,0,height,0,255),map(pos.x,0,width,0,255),noise(pos.x/100,pos.y/100)*255);
+	    }
+	    point(pos.x,pos.y);
+	    pos.add(PVector.fromAngle(noise(pos.x/100,pos.y/100)*TWO_PI+globalAngle));
+	    life--;
+	  }
+	}

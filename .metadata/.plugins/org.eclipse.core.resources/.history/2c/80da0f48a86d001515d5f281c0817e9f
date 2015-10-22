@@ -1,7 +1,0 @@
-package com.as.cs.exercises;
-
-public class CalcController {
-	public static void Main(){
-		
-	}
-}

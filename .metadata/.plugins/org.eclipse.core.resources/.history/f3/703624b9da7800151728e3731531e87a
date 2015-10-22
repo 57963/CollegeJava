@@ -1,0 +1,10 @@
+package processing;
+
+public class Thingy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

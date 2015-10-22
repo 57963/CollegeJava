@@ -1,0 +1,73 @@
+package dunes;
+
+import java.util.ArrayList;
+
+import processing.core.PApplet;
+import processing.core.PVector;
+
+public class Dunes extends PApplet{
+
+	int maxParticles = 10000;
+	ArrayList <particle> particles = new ArrayList <particle>();
+	float globalAngle = random(TWO_PI);
+	float c;
+	PVector pos;
+
+	public void setup() {
+	  size(displayWidth, displayHeight, P2D);
+	  smooth(8);
+	  strokeWeight((float) 0.5);
+	  background(0);
+	  stroke(255);
+	  frameRate(1000);
+	}
+
+	public void mousePressed() {
+	  globalAngle = random(TWO_PI);
+	}
+
+	public void draw() {
+	  if (frameCount < 1000) {
+	    manage();
+	  } else {
+	    if (frameCount == 1000) {
+	      //filter(BLUR);
+	    }
+	    noLoop();
+	    //filter(BLUR);
+	    noStroke();
+	    for (int u=0; u<1500; u++) {
+	      c = random(150);
+	      fill(random(50), random(180), random(255), random(90));
+	      pos = new PVector(random(width), random(height));
+	      if (dist(pos.x, pos.y, width/2, height/2)<200) {
+	        ellipse(pos.x, pos.y, c, c);
+	      }
+	    }
+	  }
+	}
+
+
+
+	void manage() {
+	  for (int i = 0; i<particles.size (); i++) {
+	    particle p  = particles.get(i);
+	    if (p.life <= 0) {
+	      particles.remove(i);
+	    }
+	  }
+	  for (particle p : particles) {
+	    p.draw();
+	  }
+	  while (particles.size () < maxParticles) {
+	    particles.add(new particle(random(width), random(height), random(1)<0.5));
+	  }
+	}
+
+
+	public static void main(String[] args) {
+		PApplet.main(new String[] { dunes.Dunes.class.getName() });
+
+	}
+
+}

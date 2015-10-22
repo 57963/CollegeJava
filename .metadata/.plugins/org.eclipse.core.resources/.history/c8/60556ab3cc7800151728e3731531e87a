@@ -1,0 +1,17 @@
+package processing;
+
+import processing.core.PApplet;
+
+
+public class Processing extends PApplet {
+
+	public void setup() {
+	}
+
+	public void draw() {
+	}
+	
+	public static void main(String _args[]) {
+		PApplet.main(new String[] { processing.Processing.class.getName() });
+	}
+}
