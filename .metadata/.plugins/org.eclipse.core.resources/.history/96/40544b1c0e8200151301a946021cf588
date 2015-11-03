@@ -1,0 +1,9 @@
+package com.as.cs.exersices.isBinary;
+
+public class IsBinary {
+
+	public IsBinary() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

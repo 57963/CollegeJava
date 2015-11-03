@@ -1,0 +1,9 @@
+package com.as.cs.exersices.oddOrEven;
+
+public class OddOrEven {
+
+	public OddOrEven() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

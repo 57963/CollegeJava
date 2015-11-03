@@ -1,0 +1,12 @@
+package com.as.cs.exercises.alphabet;
+
+public class Alphabet {
+
+	public static void main(String args[]){
+		System.out.print("abcdefghijklmnopqrstuvwxyz");
+	}
+	public Alphabet() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

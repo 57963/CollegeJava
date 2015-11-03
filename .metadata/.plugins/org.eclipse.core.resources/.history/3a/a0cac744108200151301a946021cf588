@@ -1,0 +1,9 @@
+package com.as.cs.exercises.alphabet;
+
+public class Alphabet {
+
+	public Alphabet() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

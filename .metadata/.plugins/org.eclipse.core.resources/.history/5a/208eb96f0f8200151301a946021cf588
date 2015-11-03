@@ -1,0 +1,9 @@
+package com.as.cs.exersices.numberTriangleThingy;
+
+public class NumberTriangleThingy {
+
+	public NumberTriangleThingy() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
