@@ -1,0 +1,19 @@
+package com.as.cs.exersices.isPrime;
+
+import java.util.Scanner;
+
+public class IsPrime {
+	static Scanner keyboard = new Scanner(System.in);
+	static int input;
+	static boolean prime = true;
+	public static void main(String[] args) {
+		System.out.print("Input Number : ");
+		input = keyboard.nextInt();
+		for(int i = 1;i<input;i++){
+			if((int)input/i == input/i){
+				prime = false;
+			}
+		}
+		System.out.print(prime);
+	}
+}
